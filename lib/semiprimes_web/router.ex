@@ -5,8 +5,9 @@ defmodule SemiprimesWeb.Router do
     plug :accepts, ["json"]
   end
 
-  scope "/api", SemiprimesWeb do
+  scope "/api/v1", SemiprimesWeb, as: :api_v1 do
     pipe_through :api
+    post "/semiprime", APIController, :semiprime
   end
 
   # Enables LiveDashboard only for development
