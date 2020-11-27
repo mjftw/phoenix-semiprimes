@@ -11,6 +11,26 @@ defmodule SemiprimesWeb.APIControllerTest do
     assert %{"number" => 3, "is_semiprime" => _} = json_response(resp, 200)
   end
 
+  test "POST to :semiprime action returns 400 on invalid number format", %{conn: conn} do
+    resp = post(conn, Routes.api_v1_api_path(conn, :semiprime), number: "hello")
+    assert json_response(resp, 400)
+  end
+
+  test "POST to :semiprime action returns 400 on missing number or batch arg", %{conn: conn} do
+    resp = post(conn, Routes.api_v1_api_path(conn, :semiprime))
+    assert json_response(resp, 400)
+  end
+
+  test "POST to :semiprime action returns 400 on batch not all numbers", %{conn: conn} do
+    resp = post(conn, Routes.api_v1_api_path(conn, :semiprime), batch: [1, "hello", 3])
+    assert json_response(resp, 400)
+  end
+
+  test "POST to :semiprime action returns 400 on batch not list", %{conn: conn} do
+    resp = post(conn, Routes.api_v1_api_path(conn, :semiprime), batch: "foo")
+    assert json_response(resp, 400)
+  end
+
   test "POST to :semiprime action returns is_semiprime same as Math.is_semiprime?/1", %{conn: conn} do
     number = 101
     resp = post(conn, Routes.api_v1_api_path(conn, :semiprime), number: number)
@@ -43,4 +63,5 @@ defmodule SemiprimesWeb.APIControllerTest do
 
     assert expected == json_response(resp, 200)
   end
+
 end

@@ -1,14 +1,13 @@
 # Semiprimes
 
-Simple REST API to check where a given number (or batch of numbers) are semiprimes.
-
-A semiprime is defined as a number with exactly two prime factors
+Simple REST API to check where a given number (or batch of numbers) are semiprimes.  
+A semiprime is defined as a number with exactly two prime factors.
 
 The implementation used to find whether a number is a semiprime is somewhat naive and definitely not
 efficient (something like `O(N^3)`).  
 A more efficient implementation could use [Strassen's Algorithm](https://en.wikipedia.org/wiki/Strassen_algorithm).
 
-## Start server
+## Start the server
 
 To start your Phoenix server:
 
