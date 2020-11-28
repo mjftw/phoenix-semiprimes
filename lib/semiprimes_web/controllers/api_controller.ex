@@ -49,7 +49,6 @@ defmodule SemiprimesWeb.APIController do
       Enum.map(errors, &flatten_error/1)
     end
 
-
     defp flatten_error({err_atom, {message, _type}}) do
       %{Atom.to_string(err_atom) => message}
     end
