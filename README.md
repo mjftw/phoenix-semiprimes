@@ -8,7 +8,7 @@ A semiprime is defined as a number with exactly two prime factors.
 
 The implementation used to find whether a number is a semiprime is somewhat naive and definitely not
 efficient (something like `O(N^3)`).  
-A more efficient implementation could use [Strassen's Algorithm](https://en.wikipedia.org/wiki/Strassen_algorithm).
+There's bound to be a clever mathematical way of doing this faster.
 
 CI implemented with Github Actions, using [Coveralls](https://coveralls.io/github/mjftw/phoenix-semiprimes?branch=master) to
 check test coverage, and [Codacy](https://app.codacy.com/gh/mjftw/phoenix-semiprimes/dashboard?branch=master) to ensure that
@@ -103,4 +103,4 @@ Some possible extensions could be:
 
 * Authentication for API using OAuth2 (bearer auth probably)
 * OpenAPI definitions and Swagger documentation with executable endpoints
-* A more efficient semiprimes algorithm, possibly using [Strassen's Algorithm](https://en.wikipedia.org/wiki/Strassen_algorithm)
+* A more efficient semiprimes algorithm
