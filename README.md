@@ -85,3 +85,14 @@ Response from server (whitespace added for readability):
   ]
 }
 ```
+
+## Possible extensions
+
+I considered adding some extensions to the project, but decided that it was outside the scope of the
+challenge, so I should leave them.
+
+Some possible extensions could be:
+
+* Authentication for API using OAuth2 (bearer auth probably)
+* OpenAPI definitions and Swagger documentation with executable endpoints
+* A more efficient semiprimes algorithm, possibly using [Strassen's Algorithm](https://en.wikipedia.org/wiki/Strassen_algorithm)
