@@ -1,5 +1,7 @@
 # Semiprimes
 
+[![Codacy Badge](https://app.codacy.com/project/badge/Grade/c05a36aacfc2424e81909b97d7fe132c)](https://www.codacy.com/gh/mjftw/phoenix-semiprimes/dashboard?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=mjftw/phoenix-semiprimes&amp;utm_campaign=Badge_Grade)
+
 Simple REST API to check where a given number (or batch of numbers) are semiprimes.  
 A semiprime is defined as a number with exactly two prime factors.
 
