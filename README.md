@@ -10,6 +10,11 @@ The implementation used to find whether a number is a semiprime is somewhat naiv
 efficient (something like `O(N^3)`).  
 A more efficient implementation could use [Strassen's Algorithm](https://en.wikipedia.org/wiki/Strassen_algorithm).
 
+CI implemented with Github Actions, using [Coveralls](https://coveralls.io/github/mjftw/phoenix-semiprimes?branch=master) to
+check test coverage, and [Codacy](https://app.codacy.com/gh/mjftw/phoenix-semiprimes/dashboard?branch=master) to ensure that
+the code (and Markdown docs) conform to common coding styles, and are free of common errors.
+
+Request parameters validation is done using schemaless [Ecto Changesets](https://hexdocs.pm/ecto/Ecto.Changeset.html).
 ## Start the server
 
 To start your Phoenix server:
